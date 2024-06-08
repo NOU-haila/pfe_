@@ -1,0 +1,619 @@
+
+
+.app{
+    display: flex;
+    justify-content: center;
+
+
+    .container{
+        width: 1024px;
+
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //LOGIN ET signup
+        // Variables
+$primary-color: #4b0049;
+$secondary-color: #a076a5;
+$background-color: #f5f5f5;
+$input-background-color: #e0e0e0;
+$input-border-color: #ccc;
+$button-background-color: $primary-color;
+$button-hover-color: darken($primary-color, 10%);
+$button-text-color: #fff;
+$text-color: #333;
+
+.loginPage {
+  display: flex;
+  height: 100vh;
+  background-color: $background-color;
+  
+  .container {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    .videoDiv {
+      flex: 1;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .textDiv {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary-color;
+        text-align: center;
+      }
+    }
+    
+    .formDiv {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      background-color: $background-color;
+      
+      .headerDiv {
+        text-align: center;
+        
+        h3 {
+          color: $primary-color;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      .form {
+        display: grid;
+        gap: 1rem;
+        
+        .showMessage {
+          color: $secondary-color;
+          text-align: center;
+        }
+        
+        .inputDiv {
+          display: flex;
+          flex-direction: column;
+          
+          label {
+            margin-bottom: 0.5rem;
+            color: $text-color;
+            font-weight: bold;
+          }
+          
+          .input {
+            display: flex;
+            align-items: center;
+            background-color: $input-background-color;
+            border: 1px solid $input-border-color;
+            padding: 0.5rem;
+            border-radius: 4px;
+            
+            .icon {
+              margin-right: 0.5rem;
+              color: $primary-color;
+            }
+            
+            input {
+              flex: 1;
+              border: none;
+              background: none;
+              outline: none;
+              padding: 0.5rem;
+            }
+          }
+        }
+        
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $button-background-color;
+          color: $button-text-color;
+          padding: 0.75rem;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          
+          &:hover {
+            background-color: $button-hover-color;
+          }
+          
+          .icon {
+            margin-left: 0.5rem;
+          }
+        }
+        
+        .footerDiv {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          .text {
+            margin-right: 0.5rem;
+            color: $text-color;
+          }
+          
+          .btn {
+            background-color: $button-background-color;
+            color: $button-text-color;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            text-decoration: none;
+            
+            &:hover {
+              background-color: $button-hover-color;
+            }
+          }
+        }
+        
+        .forgotPassword {
+          text-align: center;
+          color: $text-color;
+          
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+        //NAVBAR
+       .navbar{
+        .container{
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header{    
+            display: flex;
+            align-items: center;
+            padding: 10px 20px; /* Ajustez la marge intérieure selon vos besoins */
+            background-color: #fffefe;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            .minded{
+                color: rgb(202, 172, 232);
+                font-size: 24px;
+            }
+            .event{
+                color: rgb(0, 0, 0);
+                font-size: 24px;
+            }
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            h4{
+                font-size: 16px;
+                font-weight: 300;
+            }
+            span{
+                cursor: pointer;
+            }
+
+            .log{
+                background-color:  rgb(202, 172, 232);
+                width: 50px;
+                height: 50px;
+                border-radius:50% ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 300;
+                border: 1px solid rgb(131, 94, 142);
+
+
+                &:hover{
+                    width: 48px;
+                    height: 48px;
+                    color: rgb(79, 15, 98);
+                    background-color: azure;
+                    border: 1px solid rgb(131, 94, 142);
+                }
+            }
+        }
+        
+       }
+
+       //home
+       .home {
+        .posts {
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          gap: 150px;
+  
+          .post {
+            display: flex;
+            gap: 100px;
+  
+            &:nth-child(2n + 1) {
+              flex-direction: row-reverse;
+            }
+  
+            .img {
+              flex: 2;
+              position: relative;
+  
+              &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgb(202, 172, 232);
+                position: absolute;
+                top: 20px;
+                left: -20px;
+                z-index: -1;
+              }
+  
+              img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+              }
+            }
+
+                .content {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+        
+                    h1 {
+                      font-size: 48px;
+                    }
+        
+                    p {
+                      font-size: 18px;
+                    }
+        
+                    button {
+                      width: max-content;
+                      padding: 10px 20px;
+                      border: none;
+                      cursor: pointer;
+                      background-color: white;
+                      border: 1px solid rgb(100, 0, 128);
+                      color: rgb(121, 10, 104);
+        
+                      &:hover {
+                        border: 1px solid white;
+                        background-color: rgb(131, 94, 142) ;
+                        color: rgb(0, 0, 0);
+                      }
+                    }
+                  }
+            }
+        }
+       }
+
+       //event
+       .event{
+        display: flex;
+        gap:50px;
+
+        
+
+
+        .menu{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            h2{
+                font-size: 20px;
+                color: rgb(119, 19, 149);
+            }
+            .post{
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 5px 5px rgba($color: #000000, $alpha: 1.0);
+                justify-content: space-between;
+                flex-direction: column;
+
+                button {
+                    position: center;
+                    width: max-content;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 1px solid rgb(100, 0, 128);
+                    color: rgb(121, 10, 104);
+      
+                    &:hover {
+                      border: 1px solid white;
+                      background-color: rgb(131, 94, 142) ;
+                      color: rgb(0, 0, 0);
+                    }
+                  }
+
+
+                &:nth-child(2n + 1) {
+                    flex-direction: row-reverse;
+                  }
+
+                img{
+                    width: 50%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    float: left;
+                    shape-outside: margin-box;
+                    margin: 0 20px 5px 0;
+
+                }
+                p{
+                    line-height: 1.4;
+                }
+
+               
+            }
+        }
+    }
+
+//write
+.add {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    .content {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input {
+        padding: 10px;
+        border: 1px solid lightgray;
+      }
+
+      .editorContainer {
+        height: 300px;
+        overflow: scroll;
+        border: 1px solid lightgray;
+
+        .editor {
+          height: 100%;
+          border: none;
+        }
+      }
+    }
+
+    .menu {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .item {
+        border: 1px solid lightgray;
+        padding: 10px;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #383737;
+
+        h1{
+          font-size: 20px;
+        }
+
+        .file{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .buttons{
+          display: flex;
+          justify-content: space-between;
+
+          :first-child{
+            cursor: pointer;
+            color: rgb(124, 0, 128);
+            background-color: white;
+            border: 1px solid rgb(124, 0, 128);
+            padding: 3px 5px;
+          }
+          :last-child{
+            cursor: pointer;
+            color: white;
+            background-color: rgb(124, 0, 128);
+            border: 1px solid rgb(124, 0, 128);
+            padding: 3px 5px;
+          }
+        }
+
+        .cat{
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          color: rgb(18, 16, 18);
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: 100px;
+    padding: 20px;
+    background-color:rgb(59, 10, 107) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    
+    span{
+        color: rgb(202, 172, 232);
+        font-size: 24px;
+    }
+    
+  }
+
+  //signup
+  $primary-color: #5a5959;
+  $secondary-color: #ffffff;
+  $accent-color: #c5c5c5;
+  $btn-color: #651362;
+  
+  body {
+    background-color: $primary-color;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .container {
+      display: flex;
+      flex-direction: row;
+      background-color: $secondary-color;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .videoDiv {
+    position: relative;
+    video {
+      width: 500px; /* Adjust as needed */
+      height: 100%;
+      object-fit: cover;
+    }
+    .textDiv {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $secondary-color;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  
+  .formDiv {
+    padding: 2rem;
+    width: 400px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .headerDiv {
+      text-align: center;
+      margin-bottom: 1rem;
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        color: $btn-color;
+      }
+    }
+    .form {
+      display: grid;
+      gap: 1rem;
+      .inputDiv {
+        label {
+          font-size: 14px;
+          color: $primary-color;
+          span {
+            margin-left: 0.5rem;
+          }
+        }
+        .input {
+          display: flex;
+          align-items: center;
+          background: $accent-color;
+          border-radius: 5px;
+          padding: 0.5rem;
+          .icon {
+            margin-right: 0.5rem;
+            color: $primary-color;
+          }
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $btn-color;
+      color: $secondary-color;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: darken($btn-color, 10%);
+      }
+      .icon {
+        margin-left: 0.5rem;
+      }
+    }
+    .footerDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      .text {
+        margin-right: 0.5rem;
+        color: $primary-color;
+      }
+      a {
+        color: $btn-color;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+    }
+}
